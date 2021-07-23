@@ -1,0 +1,41 @@
+{
+  "name": "tetris",
+  "version": "1.0.0",
+  "main": "index.ts",
+  "scripts": {
+    "start": "NODE_ENV=development webpack-dev-server --mode development --open --hot",
+    "build": "NODE_ENV=production webpack --mode production"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "src/**/*.{js,jsx,ts,tsx,json,css,scss,md}": [
+      "prettier --write"
+    ]
+  },
+  "devDependencies": {
+    "@babel/core": "^7.6.4",
+    "@babel/plugin-proposal-class-properties": "^7.5.5",
+    "@babel/preset-env": "^7.6.3",
+    "babel-loader": "^8.0.6",
+    "css-loader": "^3.2.0",
+    "file-loader": "^5.0.2",
+    "html-webpack-plugin": "^3.2.0",
+    "husky": "^4.2.5",
+    "image-webpack-loader": "^6.0.0",
+    "lint-staged": "^10.2.11",
+    "node-sass": "^4.13.0",
+    "prettier": "^2.0.5",
+    "sass-loader": "^8.0.0",
+    "style-loader": "^1.0.0",
+    "ts-loader": "^6.2.1",
+    "typescript": "^3.7.2",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.9",
+    "webpack-dev-server": "^3.9.0"
+  },
+  "dependencies": {}
+}
